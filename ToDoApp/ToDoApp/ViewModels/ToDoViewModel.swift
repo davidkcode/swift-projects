@@ -7,14 +7,17 @@
 //
 
 import Foundation
+import Combine
 
 class TodoViewModel : ObservableObject {
     @Published var toDoList = [ToDo]()
+    @Published var showDone = false
     
     init(){
         self.toDoList.append(ToDo("Fingernägel"))
         self.toDoList.append(ToDo("Rasenmähen"))
         self.toDoList.append(ToDo("Waschen"))
+        self.toDoList[0].done = true
     }
     
     func updateToDo(_ id: Int, _ newValue: String){

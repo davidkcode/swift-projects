@@ -10,31 +10,31 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @ObservedObject var toDoViewModel = TodoViewModel()
-    @State var showDone = false
+    @EnvironmentObject var toDoViewModel: TodoViewModel
     
     var body: some View {
         NavigationView {
-            VStack {
-                Toggle(isOn: $showDone){
-                    Text("Show done todo`s")
-                }.padding(.all, 20.0)
+            List {
+                Toggle(isOn: self.$toDoViewModel.showDone){
+                    Text("Show done ones")
+                }
                 
-                List {
-                    ForEach(toDoViewModel.toDoList.indices) { index in
-                        NavigationLink(destination: ToDoDetail(todo: self.$toDoViewModel.toDoList[index], done: self.toDoViewModel.toDoList[index].done)){
-                            ToDoRow(todo: self.$toDoViewModel.toDoList[index])
+                ForEach(toDoViewModel.toDoList) { todo in
+                    if !self.toDoViewModel.showDone || todo.done {
+                        NavigationLink(destination: ToDoDetail(todo: todo, done: false)){
+                            ToDoRow(todo: todo)
                         }
-                    .navigationBarTitle("ToDo List", displayMode: .large)
                     }
                 }
             }
+            .navigationBarTitle("ToDo List", displayMode: .large)
+            .animation(.linear(duration: 0.3))
         }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(showDone: false)
+        ContentView().environmentObject(TodoViewModel())
     }
 }

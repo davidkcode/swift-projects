@@ -10,7 +10,7 @@ import SwiftUI
 
 struct ToDoDetail: View {
     
-    @Binding var todo: ToDo
+    var todo: ToDo
     @State var done: Bool
     
     var body: some View {
@@ -20,8 +20,8 @@ struct ToDoDetail: View {
                 .fontWeight(.bold)
                 .padding(.bottom)
                 
-            TextField("",text: $todo.title)
-                .font(.title)
+            //TextField("",text: $todo.title)
+            //    .font(.title)
             
             Divider()
             
@@ -46,7 +46,7 @@ struct ToDoDetail: View {
 
 struct ToDoDetail_Previews: PreviewProvider {
     static var previews: some View {
-        ToDoDetail(todo: .constant(ToDo("Rasieren")), done: true)
+        ToDoDetail(todo: ToDo("Rasieren"), done: true)
     }
 }
 

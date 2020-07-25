@@ -8,10 +8,11 @@
 
 import Foundation
 
-class ToDo: Identifiable {
+class ToDo: Identifiable, CustomStringConvertible {
     var id = UUID()
     var title: String
     var done = false
+    var description: String { return "ToDo: title: \(title), done: \(done)"}
     
     init(_ title: String){
         self.title = title

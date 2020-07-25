@@ -10,7 +10,7 @@ import SwiftUI
 
 struct ToDoRow: View {
     
-    @Binding var todo: ToDo
+    var todo: ToDo
     
     var body: some View {
         HStack {
@@ -27,6 +27,6 @@ struct ToDoRow: View {
 
 struct ToDoRow_Previews: PreviewProvider {
     static var previews: some View {
-        ToDoRow(todo: .constant(ToDo("Rasieren")))
+        ToDoRow(todo: ToDo("Rasieren"))
     }
 }

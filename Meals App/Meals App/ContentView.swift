@@ -56,7 +56,7 @@ struct ContentView: View {
                             ItemRow(menuItem: item)
                         }
                     }
-                }g
+                }
             }
         .navigationBarTitle("Menu")
         .listStyle(GroupedListStyle())

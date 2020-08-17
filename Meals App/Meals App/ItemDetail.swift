@@ -9,6 +9,7 @@
 import SwiftUI
 
 struct ItemDetail: View {
+    @EnvironmentObject var order: Order
     var item: MenuItem
     
     var body: some View {
@@ -29,6 +30,10 @@ struct ItemDetail: View {
                 }
                 Text("Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren.")
                 .padding()
+                
+                Button("Oder this") {
+                    self.order.add(self.item)
+                }.font(.headline)
                 Spacer()
             }
         }
@@ -39,7 +44,7 @@ struct ItemDetail: View {
 struct ItemDetail_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            ItemDetail(item: MenuItem("salad", 8.99, "salad"))
+            ItemDetail(item: MenuItem("salad", 8.99, "salad")).environmentObject(Order())
         }
     }
 }

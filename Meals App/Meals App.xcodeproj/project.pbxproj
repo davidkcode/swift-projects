@@ -17,6 +17,10 @@
 		E10BF2CC24E99FAE00936931 /* Meals_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10BF2CB24E99FAE00936931 /* Meals_AppUITests.swift */; };
 		E10BF2DA24E9A81800936931 /* ItemRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10BF2D924E9A81800936931 /* ItemRow.swift */; };
 		E10BF2DC24E9A87800936931 /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10BF2DB24E9A87800936931 /* MenuItem.swift */; };
+		E113DCB824EAFCB20087A712 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = E113DCB724EAFCB20087A712 /* Order.swift */; };
+		E113DCBA24EB00460087A712 /* OrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E113DCB924EB00460087A712 /* OrderView.swift */; };
+		E113DCBC24EB01920087A712 /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E113DCBB24EB01920087A712 /* AppView.swift */; };
+		E113DCBE24EB03750087A712 /* CheckoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E113DCBD24EB03750087A712 /* CheckoutView.swift */; };
 		E1A0DC2024E9B0400060CD40 /* ItemDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A0DC1F24E9B0400060CD40 /* ItemDetail.swift */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +58,10 @@
 		E10BF2CD24E99FAE00936931 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E10BF2D924E9A81800936931 /* ItemRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemRow.swift; sourceTree = "<group>"; };
 		E10BF2DB24E9A87800936931 /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
+		E113DCB724EAFCB20087A712 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
+		E113DCB924EB00460087A712 /* OrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderView.swift; sourceTree = "<group>"; };
+		E113DCBB24EB01920087A712 /* AppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; };
+		E113DCBD24EB03750087A712 /* CheckoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutView.swift; sourceTree = "<group>"; };
 		E1A0DC1F24E9B0400060CD40 /* ItemDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetail.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -115,6 +123,10 @@
 				E10BF2B424E99FAE00936931 /* LaunchScreen.storyboard */,
 				E10BF2B724E99FAE00936931 /* Info.plist */,
 				E10BF2B124E99FAE00936931 /* Preview Content */,
+				E113DCB724EAFCB20087A712 /* Order.swift */,
+				E113DCB924EB00460087A712 /* OrderView.swift */,
+				E113DCBB24EB01920087A712 /* AppView.swift */,
+				E113DCBD24EB03750087A712 /* CheckoutView.swift */,
 			);
 			path = "Meals App";
 			sourceTree = "<group>";
@@ -277,11 +289,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				E10BF2AA24E99FAC00936931 /* AppDelegate.swift in Sources */,
+				E113DCBA24EB00460087A712 /* OrderView.swift in Sources */,
+				E113DCBE24EB03750087A712 /* CheckoutView.swift in Sources */,
+				E113DCBC24EB01920087A712 /* AppView.swift in Sources */,
 				E1A0DC2024E9B0400060CD40 /* ItemDetail.swift in Sources */,
 				E10BF2AC24E99FAC00936931 /* SceneDelegate.swift in Sources */,
 				E10BF2AE24E99FAC00936931 /* ContentView.swift in Sources */,
 				E10BF2DA24E9A81800936931 /* ItemRow.swift in Sources */,
 				E10BF2DC24E9A87800936931 /* MenuItem.swift in Sources */,
+				E113DCB824EAFCB20087A712 /* Order.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
